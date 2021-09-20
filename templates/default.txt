@@ -1,0 +1,13 @@
+Hello, ${CLIENT_NAME}!
+I am very glad to apply for this job.
+${YOUR_SKILLS}
+
+I have expertise in building headless browser bots.
+I have built many automated bots with nodeJs libraries like puppeteer, phantomJs, selemium before.
+This project is scrapping job I have done lately.
+And also A few days ago, I have completed a automating project scraps data from different sites automatically and provide api to serve scrapped data.
+I used puppeteer in this project.
+With puppeteer headless browser, I can fully imitate the human actions.
+
+Best Regards
+${YOUR_NAME}

@@ -13,7 +13,7 @@ function setPageUseragent(browserpage, index = 61)
 }
 
 async function launchPuppeteer(){
-    const browser = await puppeteer.launch({
+    global.browser = await puppeteer.launch({
         ignoreHTTPSErrors: true,
         headless: false,
         args: minimal_args,
@@ -33,32 +33,34 @@ const minimal_args = [
     '--disable-speech-api',
     '--mute-audio',
     '--no-default-browser-check',
-    '--no-sandbox',
-    '--no-zygote',
+    // '--no-sandbox',
+    // '--no-zygote',
     '--no-pings',
     '--disable-sync',
-    '--disable-notifications',
+    // '--disable-notifications',
     '--disable-popup-blocking',
-    '--disable-component-update',
-    '--disable-default-apps',
-    '--disable-domain-reliability',
-    '--disable-client-side-phishing-detection',
-    '--disable-breakpad',
-    '--disable-ipc-flooding-protection',
+    // '--disable-component-update',
+    // '--disable-default-apps',
+    // '--disable-domain-reliability',
+    // '--disable-client-side-phishing-detection',
+    // '--disable-breakpad',
+    // '--disable-ipc-flooding-protection',
     '--no-first-run',
     '--disable-features=AudioServiceOutOfProcess',
-    '--disable-infobars',
-    '--window-position=0,0',
+    // '--disable-infobars',
+    // '--window-position=0,0',
     '--ignore-certifcate-errors', 
     '--ignore-certifcate-errors-spki-list',
-    '--disable-setuid-sandbox',
-    '--disable-accelerated-2d-canvas',
-    '--disable-gpu',
+    // '--disable-setuid-sandbox',
+    // '--disable-accelerated-2d-canvas',
+    // // '--disable-gpu',
     '--window-size=1920,1160',
-    '--hide-scrollbars',
+    // '--start-maximized',
+    // // '--hide-scrollbars',
     '--disable-background-networking'
 ];
 
 module.exports = {
-    launchPuppeteer
+    launchPuppeteer,
+    setPageUseragent
 }
